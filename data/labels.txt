@@ -1,0 +1,5 @@
+benign
+malware_dns
+port_scan
+priv_escalation
+ssh_bruteforce

@@ -1,0 +1,16 @@
+text,label
+sshd: Failed password for invalid user admin from 10.10.10.5 port 59212 ssh2,ssh_bruteforce
+sshd[2331]: Failed password for root from 192.168.1.77 port 40122 ssh2,ssh_bruteforce
+Authentication failure for invalid user test from 203.0.113.9 via ssh,ssh_bruteforce
+kernel: IPTABLES: IN=eth0 OUT= MAC= SRC=192.168.1.88 DST=192.168.1.10 PROTO=TCP SPT=54321 DPT=22 SYN,port_scan
+"firewalld: Possible port scan detected from 198.51.100.25 to 192.168.1.10 ports 22,80,443",port_scan
+Suricata: ET SCAN NMAP -sS detection from 172.16.0.5,port_scan
+suricata: ET TROJAN Observed DNS Query to known bad domain evil-malware[.]com from 192.168.1.55,malware_dns
+dnsmasq: suspicious DNS request for shady123.cn from host PC-22,malware_dns
+IDS: MALWARE-CNC domain lookup xyz.badco.net by agent workstation-7,malware_dns
+sudo: user bob : TTY=pts/1 ; PWD=/home/bob ; COMMAND=/bin/bash ; result=authentication failure,priv_escalation
+audit: USER_ROLE_CHANGE uid=1001 old_role=user new_role=admin user=alice,priv_escalation
+audit: SETUID attempted on /usr/bin/passwd by user tom,priv_escalation
+cron: (root) CMD (run-parts /etc/cron.hourly),benign
+systemd: Started Daily apt download activities.,benign
+kernel: usb 1-1: new high-speed USB device number 6 using xhci_hcd,benign

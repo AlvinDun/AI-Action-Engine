@@ -1,0 +1,20 @@
+ssh_bruteforce:
+  action: block_ip
+  params_from: ip
+
+port_scan:
+  action: block_ip
+  params_from: ip
+
+malware_dns:
+  action: quarantine_host
+  params_from: agent
+
+priv_escalation:
+  action: disable_user
+  params_from: user
+
+benign:
+  action: notify_admin
+  params:
+    channel: "log_only"
